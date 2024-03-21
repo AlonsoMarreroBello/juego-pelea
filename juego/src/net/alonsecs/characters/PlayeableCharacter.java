@@ -41,14 +41,15 @@ public class PlayeableCharacter {
   }
 
   public void recibeDamage(int damage) {
-    this.hp =this.hp - damage;
+    this.hp = this.hp - damage;
     if (this.hp < 0) {
       this.hp = 0;
     }
   }
 
-  public void useSkill(int index) {
-    skills[index].use();
+  public int useSkill(int index) {
+    this.pp = this.pp - skills[index].getCost();
+    return skills[index].getDamage();
   }
 
   @Override
