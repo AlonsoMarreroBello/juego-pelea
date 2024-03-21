@@ -1,12 +1,16 @@
 package net.alonsecs.characters;
 
-import java.util.Arrays;
-
 public class PlayeableCharacter {
   protected int hp;
   protected int pp;
   protected String name;
   protected Skill[] skills;
+
+  public PlayeableCharacter(int hp, int pp, String name) {
+    this.hp = hp;
+    this.pp = pp;
+    this.name = name;
+  }
 
   public PlayeableCharacter(int hp, int pp, String name, Skill[] skills) {
     this.hp = hp;
@@ -17,6 +21,17 @@ public class PlayeableCharacter {
 
   public int getHp() {
     return hp;
+  }
+  public String showHp() {
+    String message = "[";
+    for (int i = 0; i < this.hp/5; i++) {
+      message += "#";
+    }
+    for (int i = 20; i > this.hp/5; i--) {
+      message += "-";
+    }
+    message += "]";
+    return message;
   }
   public void setHp(int hp) {
     this.hp = hp;
@@ -52,10 +67,23 @@ public class PlayeableCharacter {
     return skills[index].getDamage();
   }
 
-  @Override
-  public String toString() {
-    return "Character [hp=" + hp + ", pp=" + pp + ", name=" + name + ", skills=" + Arrays.toString(skills) + "]";
+  public String showSkillsList() {
+    String message = ""; 
+    for (Skill skill : skills) {
+      message += "\t" + skill.toString();
+    }
+    return message;
   }
 
-  
+  @Override
+  public String toString() {
+    return getName() + "\n------------------------------------------------------\n"  +
+    showHp() + "\n" + getHp() + " HP \n" + 
+    getPp() + " PP" + 
+    "\nHabilidades: \n" + 
+    showSkillsList() + 
+    "------------------------------------------------------\n";
+  }
+
+
 }

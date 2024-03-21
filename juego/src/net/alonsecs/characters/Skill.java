@@ -29,7 +29,7 @@ public class Skill {
 
   @Override
   public String toString() {
-    return "Skill [damage=" + damage + ", cost=" + cost + ", name=" + name + "]";
+    return name + " daño=" + damage + " coste=" + cost + "\n";
   }
 
 }
