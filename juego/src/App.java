@@ -9,7 +9,7 @@ public class App {
     diego.recibeDamage(15);
     System.out.println(diego.toString());
     
-    /* Skill[] skills = new Skill[4];
+    Skill[] skills = new Skill[4];
     Skill[] skills2 = new Skill[4];
     skills2[0] = new Skill(10,20,"Puño");
     skills2[1] = new Skill(10,20,"Escupitajo al ojo");
@@ -24,6 +24,6 @@ public class App {
     System.out.println(personaje2.toString());
     personaje2.recibeDamage(personaje1.useSkill(2));
     System.out.println(personaje1.toString());
-    System.out.println(personaje2.toString()); */
+    System.out.println(personaje2.toString());
   }
 }

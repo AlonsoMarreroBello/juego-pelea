@@ -77,7 +77,8 @@ public class PlayeableCharacter {
 
   @Override
   public String toString() {
-    return getName() + "\n------------------------------------------------------\n"  +
+    return getName() + 
+    "\n------------------------------------------------------\n"  +
     showHp() + "\n" + getHp() + " HP \n" + 
     getPp() + " PP" + 
     "\nHabilidades: \n" + 
