@@ -1,7 +1,6 @@
-package net.alonsecs.characters.allies;
+package net.alonsecs.characters;
 
-import net.alonsecs.characters.PlayeableCharacter;
-import net.alonsecs.characters.Skill;
+import net.alonsecs.abilities.Skill;
 
 public class Diego extends PlayeableCharacter {
   private Skill[] personalSkills = new Skill[4];

@@ -1,5 +1,7 @@
 package net.alonsecs.characters;
 
+import net.alonsecs.abilities.Skill;
+
 public class PlayeableCharacter {
   protected int hp;
   protected int pp;
