@@ -1,4 +1,4 @@
-package net.alonsecs.characters;
+package net.alonsecs.abilities;
 
 public class Skill {
   protected int damage;
